@@ -4,6 +4,7 @@
 @use "animations";
 @use "../view/header/header" as *;
 @use "../view/footer/footer" as *;
+@use "../sections/home-hero/home-hero" as *;
 @use "../sections/index-hero/index-hero" as *;
 @use "../sections/index-features/index-features" as *;
 @use "../sections/index-approach/index-approach" as *;
@@ -19,4 +20,5 @@
 @use "../sections/contacts-hero/contacts-hero" as *;
 @use "../sections/contacts-info/contacts-info" as *;
 @use "../sections/contacts-visit/contacts-visit" as *;
+@use "../sections/packaging-list/packaging-list" as *;
 @use "responsive";

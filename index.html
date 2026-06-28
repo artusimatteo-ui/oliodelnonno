@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olive Oil Studio - Premium Olive Oil</title>
   <meta name="description" content="Premium extra virgin olive oil from small Mediterranean family farms.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts loaded dynamically based on cookie consent -->
   <!-- CSS is injected by webpack -->
 </head>
 <body>
@@ -15,24 +13,44 @@
     <%= header %>
 
     <main>
+      <%= section('home-hero') %>
       <%= section('index-hero') %>
-      <%= section('index-features') %>
-      <%= section('index-approach') %>
-      <%= section('index-collection') %>
-      <%= section('index-cta') %>
+      
       <%= section('about-hero') %>
-      <%= section('about-philosophy') %>
-      <%= section('about-timeline') %>
-      <%= section('about-values') %>
+      <!-- <%= section('about-timeline') %> -->
+      <!-- <%= section('index-features') %> -->
+      <!-- <%= section('index-approach') %> -->
+      
+      <!-- <%= section('index-cta') %> -->
+      <!-- <%= section('about-values') %> -->
       <%= section('products-hero') %>
       <%= section('products-list') %>
-      <%= section('products-formats') %>
-      <%= section('contacts-hero') %>
+      
+      <%= section('index-collection') %>
       <%= section('contacts-info') %>
-      <%= section('contacts-visit') %>
+      <!-- <%= section('contacts-visit') %> -->
     </main>
 
     <%= footer %>
+
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+          <h3 data-i18n="cookies.title">We use cookies</h3>
+          <p data-i18n="cookies.description">We use cookies to improve your experience, remember your preferences, and analyze site usage. You can choose to accept all, reject all, or only essential cookies.</p>
+          <p class="cookie-banner-links">
+            <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+            <span> | </span>
+            <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+          </p>
+        </div>
+        <div class="cookie-banner-buttons">
+          <button id="cookie-reject-all" class="cookie-btn cookie-btn-secondary" data-i18n="cookies.rejectAll">Reject All</button>
+          <button id="cookie-essential-only" class="cookie-btn cookie-btn-secondary" data-i18n="cookies.essentialOnly">Essential Only</button>
+          <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary" data-i18n="cookies.acceptAll">Accept All</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

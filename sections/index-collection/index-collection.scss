@@ -18,12 +18,17 @@
   box-shadow: 0 28px 44px rgba(31, 42, 26, 0.16);
 }
 
-.product-card img {
+.product-card img,
+.product-card video {
   border-radius: 18px;
   margin-bottom: 16px;
   height: 180px;
   width: 100%;
   object-fit: cover;
+}
+
+.product-video {
+  display: block;
 }
 
 .tag {

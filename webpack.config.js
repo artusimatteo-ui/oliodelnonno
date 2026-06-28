@@ -2,8 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const pages = ['index'];
+const pages = ['index', 'privacy', 'terms', 'packaging'];
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';
@@ -19,8 +20,8 @@ module.exports = (env, argv) => {
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'js/[name].[contenthash].js',
-      assetModuleFilename: 'assets/[name].[contenthash][ext][query]',
+      filename: 'js/main.js',
+      assetModuleFilename: 'assets/[name][ext]',
       clean: true
     },
     module: {
@@ -38,6 +39,11 @@ module.exports = (env, argv) => {
     plugins: [
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash].css'
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'img'), to: 'img' }
+        ]
       }),
       ...pages.map(
         (name) =>

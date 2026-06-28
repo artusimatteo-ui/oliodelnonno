@@ -1,12 +1,17 @@
 @use "../../scss/variables" as *;
 
 .site-header {
-  position: sticky;
+  //position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
   z-index: 20;
-  background: rgba(247, 242, 231, 0.92);
+  //background: rgba(247, 242, 231, 0.92);
+  background: $bg_header;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(90, 107, 46, 0.1);
+  border-bottom: none;
 }
 
 .header-inner {
@@ -29,6 +34,27 @@
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: $olive-950;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0;
+  max-width: 100px;
+}
+
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: $olive-950;
 }
 
 .nav {
@@ -40,7 +66,7 @@
 .nav-link {
   position: relative;
   padding-bottom: 4px;
-  color: $olive-700;
+  color: $olive-900;
   transition: color 0.3s ease;
 }
 

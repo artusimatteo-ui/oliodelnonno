@@ -1,5 +1,6 @@
 @use "../../scss/variables" as *;
 
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -35,4 +36,38 @@
   border-radius: 12px;
   padding: 10px 12px;
   font-family: inherit;
+}
+
+.contact-form .checkbox-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-form .checkbox-consent input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  border: 1px solid rgba(42, 54, 34, 0.3);
+  border-radius: 4px;
+  accent-color: $gold;
+}
+
+.contact-form .checkbox-consent span {
+  flex: 1;
+  color: $olive-700;
+}
+
+.contact-form .checkbox-consent a {
+  color: $gold;
+  text-decoration: underline;
+  
+  &:hover {
+    opacity: 0.8;
+  }
 }

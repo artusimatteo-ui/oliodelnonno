@@ -1,6 +1,6 @@
-<section class="section">
+<section class="page-hero" id="contacts">
   <div class="container contact-grid">
-    <div class="contact-card">
+      <div class="contact-card">
       <h2 data-i18n="contactsInfo.title">Our contacts</h2>
       <p data-i18n="contactsInfo.address">Fraz. Morano Madonnuccia snc 06023</p>
       <p data-i18n="contactsInfo.hours">Mon-Fri: 10:00 - 19:00</p>
@@ -12,22 +12,26 @@
         <span data-i18n="contactsInfo.tag3">Wholesale</span>
       </div>
     </div>
-    <form class="contact-form">
+    <form class="contact-form" name="contact-form" data-netlify="true" method="POST">
       <label>
         <span data-i18n="contactsForm.nameLabel">Your name</span>
-        <input type="text" data-i18n-attr="placeholder:contactsForm.namePlaceholder" placeholder="Anna Koval">
+        <input type="text" data-i18n-attr="placeholder:contactsForm.namePlaceholder" placeholder="Nonno Peppino" name="user-name" required>
       </label>
       <label>
         <span data-i18n="contactsForm.emailLabel">Email</span>
-        <input type="email" data-i18n-attr="placeholder:contactsForm.emailPlaceholder" placeholder="anna@email.com">
+        <input type="email" data-i18n-attr="placeholder:contactsForm.emailPlaceholder" placeholder="nonno.peppino@email.com" name="user-email" required>
       </label>
       <label>
         <span data-i18n="contactsForm.subjectLabel">Subject</span>
-        <input type="text" data-i18n-attr="placeholder:contactsForm.subjectPlaceholder" placeholder="Tasting for a restaurant">
+        <input type="text" data-i18n-attr="placeholder:contactsForm.subjectPlaceholder" placeholder="Richiesta di informazioni" name="Subject" required>
       </label>
       <label>
         <span data-i18n="contactsForm.messageLabel">Message</span>
-        <textarea rows="4" data-i18n-attr="placeholder:contactsForm.messagePlaceholder" placeholder="Tell us what you need..."></textarea>
+        <textarea rows="4" data-i18n-attr="placeholder:contactsForm.messagePlaceholder" placeholder="Dicci cosa ti serve..." name="message" required></textarea>
+      </label>
+      <label class="checkbox-consent">
+        <input type="checkbox" name="data-consent" required>
+        <span data-i18n="contactsForm.consentText">I consent to the processing of my personal data to be contacted, as indicated in the <a href="/privacy.html" target="_blank">privacy policy</a></span>
       </label>
       <button class="btn" type="submit" data-i18n="contactsForm.submit">Send</button>
     </form>
